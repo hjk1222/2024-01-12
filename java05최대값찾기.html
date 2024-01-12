@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java최대값찾기</title>
+</head>
+<body>
+    <div class="print"></div>
+    <div class="print1"></div>
+    
+    <script lang="java">
+        function findMax(){
+            let max = -Infinity;
+            console.log(max);
+
+            for(var i = 0 ; i < arguments.length ; i++){
+                if(arguments[i] > max){
+                    max = arguments[i];
+                }
+            }
+            return max
+        }//
+
+        document.querySelector(".print").innerHTML = findMax(4,5,6);
+
+
+//findMax : 최대값 찾아줘
+//no : 내가 버려지고 다음 값 가져오기
+//yes: 내가 남기
+//-Infinity : 마이너스 무한대. findMax(4,5,6) 값 비교 위해...
+//arguments : 인수의 배열 갯수 구하기 위해...
+//for문: 반복.
+
+
+
+    function sumALL(){
+        let sum = 0;
+        for(var i=0; i <arguments.length; i++){
+            sum += arguments[i];
+        }
+        return sum;
+    }//
+
+    document.querySelector(".print1").innerHTML = findMax(14,200,588,800,4,65,95,78);
+    </script>
+
+</body>
+</html>

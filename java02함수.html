@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+</head>
+<body>
+<!-- 자바스크립트 펑션문 -->
+<h1>javascript function</h1>
+<p class="print1"></p>
+<p class="print2"></p>
+
+<script lang="java">
+
+    let text = "input" + carNAME; 
+    document.querySelector(".print1").innerHTML = text;
+
+    function car(){
+        let carNAME = "그렌저";
+        let text = "output:" + carNAME;
+        document.querySelector(".print1").innerHTML = text;
+    }//
+//carNAME : 이란 함수는 지역함수로. function car() 함수 안에서만 사용가능함.
+//함수선언(일반적으로 펑션문으로 함), 변수선언
+    car();
+    
+</script>
+
+</body>
+</html>

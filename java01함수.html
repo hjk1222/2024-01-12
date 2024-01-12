@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+</head>
+<body>
+<!-- 자바스크립트 펑션문 -->
+<h1>javascript function</h1>
+<p class="demo"></p>
+<p class="demo1"></p>
+
+<script lang="java">
+    function my1(m1, m2){
+        // m1 * m2
+        //m1: 보낼 데이터 , m2: 사용할 데이터
+        return m1 * m2;
+    }
+    var res = m1(5,3);
+    document.querySelector(".demo").innerHTML = res;
+
+    // 변수는 매게변수는 몇 개가 들어와도 상관이 없음
+    //호출 할 때 사용하는 것 = 함수
+    //let : 재사용 할 수 없는 함수. 1회성. 즉, 재선언이 불가함. (반면, var는 재사용가능)
+    //const : 할당하면, 한 번 주면 바뀔수 없는 아이.
+    //var : 계속 사용이 가능하지만 누적 사용이 될 수도 있다는 것에 주의 필요함.
+
+    //var a =10;
+    //a =5; 0
+    //var a = 11 (0k)
+
+    //let a =10;
+    //a=5 (ok)
+    //let a =11 (no)
+
+    //const a =10
+    //a = 5 (no)
+    //const a =11 (no)
+
+
+    let x = myA(4,3);
+
+    document.querySelector(".demo1").innerHTML = X
+
+    function myA(a,b){
+        return a*b +10;
+    }
+//순서를 변환하는...(???)
+//전역함수: 전국적으로 다 통용되는 함수.
+//지역함수(변수): 지역에서만 쓰이는 화폐처럼 지역에서만 쓰는 함수.
+</script>
+
+</body>
+</html>

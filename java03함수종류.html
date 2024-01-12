@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+</head>
+<body>
+<!-- 자바스크립트 펑션문 -->
+<h1>javascript function call(호출)</h1>
+<div id="write"></div>
+
+
+<script lang="java">
+    // 선언도 안되고 변형도 안되는 고정 함수
+    // var time = function maA(){   }
+    // function maA(){   }
+    
+//소문자함수
+    // var time = function maA(a,b){return a*b}
+    // var x= time(5,3);
+
+    //function maA(y){return y*y}
+    // maA(3)
+
+
+
+//<대문자함수(=내장함수)>
+    const fun_A = new Function("a","b","return a * b")
+
+    var x = fun_A(5,3);
+    console.log(x);
+
+//펑셩문 <자기호출 함수>
+    //자기 호출 함수는 이름이 필요없다.
+    (function(){
+        document.querySelector("#write").innerHTML = "안녕하세요 반가워요"
+        document.getElementById("write").innerHTML = "안녕하세요 반가워요"
+        
+    })();//
+    //getElementById : # 붙이지 않는다.
+
+    function fun_B(a,b,c){
+        return arguments.length;
+    }
+    console.log(fun_B(5,3,6,5))   
+    //함수의 인수의 갯수가 몇개인지?
+    //arguments : 함수에 들어오는 인수의 갯수를 찾아줌. 즉, 함수에 인수를 보냄.
+    //length : 갯수를 찾아주는 명령어.
+    
+    //함수를 문자화, 스트링(?)을 할 수 있다...?
+    function fun_C(a,b){
+        return a * b;
+    }
+    console.log( fun_C.toString() )
+    //toString() : 함수를 문자로 그대로 찍어내려면!
+
+
+    //<화살표 함수>
+    const aaa = (x,y) => x * y;
+    const bbb = (x,y) => {return x * y};
+    console.log(bbb)
+    //어우...함수 종류가 왤케 많어 -_-........................-_ㅠㅠㅠㅠㅠㅠ        
+</script>
+
+</body>
+</html>

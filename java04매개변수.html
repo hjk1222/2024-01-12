@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java매개변수</title>
+</head>
+<body>
+<!-- 자바스크립트 펑션문 -->
+
+<div id="demo"> </div>
+
+
+<script lang="java">
+    function myA(a,b){
+        if(b === undefined){
+            b = 2;
+        }
+        return a * b;
+    }
+    myA(5)
+//undefined : 넣지 않았다는 의미. 비어있늬? 라고 물어보는 애.
+//return : 돌려줄게.
+
+document.getElementById("demo").innerHTML = myA(5);
+function myB(a,b=10){
+    return a * b ;
+}
+console.log( myB(5) );
+
+
+function sum(...arge){
+    let sum = 0;
+    for(let ind of arge) sum += ind;
+    return sum;
+}
+//[아래]함수 호출
+let x = sum(4,9,5,10,85,90,77);
+
+console.log(x);
+
+//for문을 배열로 만들어볼게요. (for문의 형식이 있는데 기억이 안나ㅠㅠ;;)
+//arge : argument의 축약어. 함수의 배열이 많아서 ...arge로 해줌.
+//+= : 누적을 의미하느 기호.
+
+</script>
+
+</body>
+</html>
