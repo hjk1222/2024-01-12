@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> javascript</title>
+    <style type="text/css">
+        .box{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: gray;
+            position: absolute;
+            top: 10%;
+            text-align: center;
+        }
+
+        .round{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: teal;
+            position: relative;
+        }
+            
+
+    </style>
+</head>
+<body>
+    <div class="box">click me</div>
+    <div class="round"></div>
+
+    <script lang="java">
+        var box = document.querySelector(".box");
+        box.onclick = function(){
+            this.animate([
+                {left : "0%" , transform : "rotate(0deg)"},
+                {left : "50%" , transform : "rotate(360deg)"},
+            ],{
+                duration:2000,
+                fill: "forwards",
+                easing: "ease-in",
+                delay:200                
+            })
+        }
+
+        document.querySelector(".round").animate([
+            {opacity: "0", backgroundColor : "red"},
+            {opacity: "1", backgroundColor : "yellow"},
+            {opacity: "0.5", backgroundColor : "green"}
+        ], 1000)
+    </script>
+            
+
+
+</body>
+</html>
